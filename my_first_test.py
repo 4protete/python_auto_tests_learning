@@ -8,7 +8,7 @@ from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re
 
 
-class Untitled2(unittest.TestCase):
+class my_first_test(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(30)
@@ -54,7 +54,7 @@ class Untitled2(unittest.TestCase):
             self.accept_next_alert = True
 
     def tearDown(self):
-        self.driver.quit()
+        self.driver.close()
         self.assertEqual([], self.verificationErrors)
 
 
