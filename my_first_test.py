@@ -10,7 +10,7 @@ import unittest, time, re
 
 class my_first_test(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(30)
         self.base_url = "https://www.google.com.ua/"
         self.verificationErrors = []
@@ -23,6 +23,7 @@ class my_first_test(unittest.TestCase):
         driver.find_element_by_id("lst-ib").send_keys("wiki")
         driver.find_element_by_link_text("Wikipedia").click()
         driver.find_element_by_id("searchInput").clear()
+        driver.find_element_by_id("searchInput").click()
         driver.find_element_by_id("searchInput").send_keys("ukraine")
         driver.find_element_by_css_selector("div.suggestion-thumbnail").click()
         driver.find_element_by_link_text("Russia annexed in 2014").click()
