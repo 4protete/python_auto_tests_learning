@@ -22,11 +22,6 @@ class my_first_test(unittest.TestCase):
         driver.find_element_by_id("lst-ib").clear()
         driver.find_element_by_id("lst-ib").send_keys("wiki")
         driver.find_element_by_link_text("Wikipedia").click()
-        driver.find_element_by_id("searchInput").clear()
-        driver.find_element_by_id("searchInput").click()
-        driver.find_element_by_id("searchInput").send_keys("ukraine")
-        driver.find_element_by_css_selector("div.suggestion-thumbnail").click()
-        driver.find_element_by_link_text("Russia annexed in 2014").click()
 
     def is_element_present(self, how, what):
         try:
