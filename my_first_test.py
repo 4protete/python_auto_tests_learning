@@ -21,6 +21,7 @@ class my_first_test(unittest.TestCase):
         driver.get(self.base_url + "/")
         driver.find_element_by_id("lst-ib").clear()
         driver.find_element_by_id("lst-ib").send_keys("wiki")
+        driver.find_element_by_id("lst-ib").send_keys(Keys.RETURN)
         driver.find_element_by_link_text("Wikipedia").click()
         driver.get_screenshot_as_file("wiki.png")
 
